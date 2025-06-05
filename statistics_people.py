@@ -66,14 +66,14 @@ edad_prom_pais = df.groupby('pais')['edad'].mean().sort_values(ascending=False)
 # 5️⃣ - Gráficos
 
 # Personas por género
-sns.countplot(data=df, x='genero', palette='pastel')
+sns.countplot(data=df, x='genero', hue='genero', palette='pastel', legend=False)
 plt.title("Cantidad de personas por género")
 plt.xlabel("Género")
 plt.ylabel("Cantidad")
 plt.show()
 
 # Personas por país
-sns.countplot(data=df, y='pais', order=df['pais'].value_counts().index, palette='viridis')
+sns.countplot(data=df, y='pais', hue='pais', order=df['pais'].value_counts().index, palette='viridis', legend=False)
 plt.title("Cantidad de personas por país")
 plt.xlabel("Cantidad")
 plt.ylabel("País")
