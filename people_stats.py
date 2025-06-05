@@ -1,13 +1,17 @@
 import psycopg2
 from datetime import datetime
 from collections import Counter
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # Conexión a la base de datos
 conn = psycopg2.connect(
-    host='ep-lucky-bird-a5jc5s8y-pooler.us-east-2.aws.neon.tech',
-    database='neondb',
-    user='neondb_owner',
-    password='75ijuoyJAwRG'
+    host=os.getenv('DB_HOST'),
+    database=os.getenv('DB_NAME'),
+    user=os.getenv('DB_USER'),
+    password=os.getenv('DB_PASSWORD')
 )
 cur = conn.cursor()
 
