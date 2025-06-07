@@ -91,4 +91,6 @@ python3 people_stats.py
 
 - top3_paises: hash (país → cantidad)
 
+## Licencia
+Este proyecto está bajo la Licencia MIT. Consulta el archivo [LICENSE](LICENSE) para más detalles.
 
