@@ -27,6 +27,14 @@ Todos estos resultados se guardan en **Redis** para consultas rápidas posterior
 
 ## Dependencias
 
+Podes instalarte las dependencias de manera local o tener un entorno virtual activo:
+
+```bash
+python3 -m venv venv
+source venv/bin/activate  # En Linux/Mac
+venv\Scripts\activate  # En Windows
+```
+
 Instalalar con pip
 
 ```bash
@@ -58,15 +66,15 @@ CREATE TABLE personas (
 Para conectar con PostgreSQL y Redis, crea un archivo `.env` en la raíz del proyecto con las siguientes variables:
 
 ```plaintext
-POSTGRES_HOST=localhost
-POSTGRES_PORT=5432
-POSTGRES_DB=tu_base_de_datos
-POSTGRES_USER=tu_usuario
-POSTGRES_PASSWORD=tu_contraseña
+DB_HOST=localhost
+DB_NAME=tu_base_de_datos
+DB_USER=tu_usuario
+DB_PASSWORD=tu_contraseña
 
 REDIS_HOST=localhost
 REDIS_PORT=6379
-REDIS_DB=0
+REDIS_USER=default
+REDIS_PASSWORD=tu_contraseña
 ```
 ## Ejecución
 
